@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e74c3c;
+    font-family: "Open sabs" sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    overflow: visible;
+    
+}
+
+tbody{
+    background-color: gray;
+}
+
+.trivial{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 500px;
+    top: -250px;
+}
+
+#public{
+    border-radius: 3px;
+}
+
+.container{
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.5);
+    width: 400px;
+    max-width: 100%;
+    background: blue;
+   position: relative;
+  bottom: 350px;
+  height: 900px;
+}
+
+.blash{
+    background: #f7f7f7;
+    border-bottom: 1px solid var(--color-second);
+    padding: 20px 40px;
+
+}
+
+.blash h1{
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.description{
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    left: 600px;
+    width: 500px;
+    height: 350px;
+    top: 100px;
+}
+
+.form{
+    padding: 30px 40px;    
+}
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-control input{
+    border:  2px solid var(--color-second);
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+}
+
+#submitButton{
+    border: 2px solid blue;
+    font-size: 14px;
+    display: block;
+    border-radius: 5px;
+    font-family: inherit;
+ margin: auto;
+ background: rgb(138, 17, 17);
+ width: 150px;
+ height: 50px;
+ font-weight: bold;
+}
+
+.send{
+    
+    width: 50px;
+    height: 20px;
+    display: flex;
+    position: relative;
+   bottom: 1500px;
+
+
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+    <script src="donneeL.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-container sign-up">
+            <form action="/enregistrer" method="POST" name="formulaire">
+                <h2>sign up</h2>
+                <div class="form-group">
+                    <input type="text" required name="nomL" id="nomL">
+                    <i class="fas fa-user"></i>
+                    <label for="">username</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" required name="emailL" id="emailL">
+                    <i class="fas fa-at"></i>
+                    <label for="">email</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" required name="telephoneL" id="telephoneL">
+                    <i class="fas fa-phone"></i>
+                    <label for="">telephone</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" required name="vehicule" id="vehicule">
+                    <i class="fas fa-car"></i>
+                    <label for="">Vehicule</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" required name="immatriculation" id="immatriculation">
+                    <i class="fas fa-car"></i>
+                    <label for="">Immatriculation</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" required name="mdpL" id="mdpL">
+                    <i class="fas fa-lock"></i>
+                    <label for="">password</label>
+                </div>
+                
+                                
+                <button type="submit" class="btn">sign up</button>
+                <div class="link">
+                    <p>You already have an account?<a href="#" class="signin-link">   sign in</a> </p>
+                </div>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form action="/connexion" method="POST">
+                <h2>login</h2>
+                <div class="form-group">
+                    <input type="email" required id="emailL" name="emailL">
+                    <i class="fas fa-at"></i>
+                    <label for="">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" required id="mdpL" name="mdpL">
+                    <i class="fas fa-lock"></i>
+                    <label for="">Password</label>
+                </div>
+                <div class="forgot-pass">
+                    <a href="motdepasseoublie.html" id="forgotPasswordLink">forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn">login</button>
+                <div class="link">
+                    <p>Don't have an account?<a href="#" class="signup-link" id="loginButton" name="loginButton">  sign up</a> </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="style/image/livreur.png" height="500px" width="400px">
+    </div>
+    <script src="https://kit.fontawesome.com/731e7bb224.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

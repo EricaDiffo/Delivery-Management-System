@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>ORDERS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">AdminHub</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="../Customer/client.html" title="info-client">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Customer Status</span>
+				</a>
+			</li>
+			<li>
+				<a href="../Order/index.html" title="Order-info">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Delivery Information</span>
+				</a>
+			</li>
+			<li>
+				<a href="../Deliverer/Livreur.html" title="Livreur-info">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Delivery Status</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Message</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="side-menu">
+			<!-- <li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li> -->
+			<li>
+				<a href="../../administrateur.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+    <main class="table" id="customers_table">
+        <section class="table__header">
+            <h1>Deliverer View</h1>
+            <div class="input-group">
+                <input type="search" placeholder="Search Data...">
+                <img src="images/search.png" alt="">
+            </div>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Export As &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Deliverer Name <span class="icon-arrow">&UpArrow;</span></th>
+                       
+                        <th> Email<span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Telephone <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Vehicule <span class="icon-arrow">&UpArrow;</span></th>
+                       
+                        <th> Immatriculation <span class="icon-arrow">&UpArrow;</span></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    
+                    <tr>
+                        <td colspan="5" style="transform: translateX(90px);"> <center> <a href="../../livreurregisterA.html">Ajouter</a> | <a href="../../livreureditA.html">Modifier</a> | <a href="../../supprimezlivreur.html">Supprimer</a> </center></td>
+                    </tr>
+
+                    <!-- <tr>
+                        <td> 1 </td>
+                        <td> <img src="images/Zinzu Chan Lee.jpg" alt="">Grim Joe</td>
+                        <td> grim@gmail.com</td>
+                        <td> 655251964</td>
+                        <td> Cargo bike</td>
+                        <td>CMR:xol124</td>                     
+                       
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td><img src="images/Jeet Saru.png" alt=""> Dimitri </td>
+                        <td> Dimitri@gmail.com</td>
+                        <td> 690131860</td>
+                        <td> Truck</td>
+                        <td>CMR:xvw27</td>
+                        
+                    </tr>
+                    <tr>
+                        <td> 3</td>
+                        <td><img src="images/Sonal Gharti.jpg" alt=""> Nyamsi </td>
+                        <td> Nyamsi@gmail.com</td>
+                        <td> 651291066</td>
+                        <td> Van</td>
+                        <td>CMR:xbb24</td>
+                        
+                    </tr>
+                    <tr>
+                        <td> 4</td>
+                        <td><img src="images/Alson GC.jpg" alt="">Arno </td>
+                        <td> Arno@gmail.com</td>
+                        <td> 620601164</td>
+                        <td> Classic Vehicle</td>
+                        <td>CMR:vlit20</td>
+                        
+                    </tr>
+                    <tr>
+                        <td> 5</td>
+                        <td><img src="images/Sarita Limbu.jpg" alt=""> Tchana </td>
+                        <td> Tchana@gmail.com</td>
+                        <td> 685272060</td>
+                        <td> Van</td>
+                        <td>CMR:Xml11</td>
+                        
+                    </tr>
+                    <tr>
+                        <td> 6</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Claude</td>
+                        <td> Claude@gmail.com</td>
+                        <td> 661254064</td>
+                        <td> Cargo bike</td>
+                        <td>CMR:pit4</td>
+                        
+                    </tr>
+                    <tr>
+                        <td> 7</td>
+                        <td><img src="images/Alson GC.jpg" alt=""> Parker </td>
+                        <td> Parker@gmail.com</td>
+                        <td> 678106662</td>
+                        <td> Van</td>
+                        <td>CMR:xol124</td>
+                    </tr>
+                    <tr>
+                        <td> 8</td>
+                        <td><img src="images/Sarita Limbu.jpg" alt=""> Brice</td>
+                        <td> Brice@gmail.com</td>
+                        <td> 656844264</td>
+                        <td> Cargo bike</td>
+                        <td>CMR:xol7yeM</td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Billy </td>
+                        <td> Billy@gmail.com</td>
+                        <td> 651241964</td>
+                        <td> Cargo bike</td>
+                        <td>CMR:xol123</td>
+                        
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Brighton </td>
+                        <td> Brighton@gmail.com</td>
+                        <td> 658285794</td>
+                        <td> Cargo bike</td>
+                        <td>CMR:brl78p</td>
+                        
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Master </td>
+                        <td> Master@gmail.com</td>
+                        <td> 678911460</td>
+                        <td> Cargo bike</td>
+                        <td>CMR:wlto41</td>
+                        
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Benson </td>
+                        <td> Benson@gmail.com</td>
+                        <td> 657681964</td>
+                        <td> Classic Vehicle</td>
+                        <td>DL:Mol124</td>
+                        
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Grieve </td>
+                        <td> Grieve@gmail.com</td>
+                        <td> 650211765</td>
+                        <td> Cargo bike</td>
+                        <td>DL:lom4</td>
+                        
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

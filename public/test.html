@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display navigation directions</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css" type="text/css">
+<div id="map"></div>
+
+<script>
+	// TO MAKE THE MAP APPEAR YOU MUST
+	// ADD YOUR ACCESS TOKEN FROM
+	// https://account.mapbox.com
+	// mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+    // var x , y;
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYmVuZWhta2UiLCJhIjoiY2plYTl6b3c2MHg5ODJxbGV4aXR4Z3p6YSJ9.d3jSAbsqSmpJwyVcp9iXbw';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+         style: 'mapbox://styles/mapbox/streets-v12',
+       // style: 'mapbox://styles/mapbox/satellite-streets-v12',
+        
+         center: [-79.4512, 43.6568],
+        
+        zoom: 13
+    });
+
+    map.addControl(
+        new MapboxDirections({
+            accessToken: mapboxgl.accessToken
+        }),
+        'top-left'
+    );
+    function success(pos) {
+      var crd = pos.coords;
+      map.setStyle('mapbox://styles/mapbox/' + monStyle + '-v11');
+      map.setCenter([crd.longitude, crd.latitude]);
+      var marker = new mapboxgl.Marker().setLngLat([crd.longitude, crd.latitude]).addTo(map);
+    //   x = new mapboxgl.Marker().setLngLat([crd.longitude, crd.latitude]);
+    //   y = [crd.longitude, crd.latitude];
+    }
+
+    function error(err) {
+      console.warn('ERROR(' + err.code + '): ' + err.message);
+    }
+    navigator.geolocation.getCurrentPosition(success, error, { enableHighAccuracy: true });
+</script>
+<div>
+  <link rel="stylesheet" href="chatbox/styless.css">
+  <div class="chatbox-wrapper">
+    <div class="chatbox-toggle">
+      <i class='bx bx-message-dots'></i>
+    </div>
+    <div class="chatbox-message-wrapper">
+      <div class="chatbox-message-header">
+        <div class="chatbox-message-profile">
+          <img src="chatbox/avatar1.jpg" alt="" class="chatbox-message-image">
+          <div>
+            <h4 class="chatbox-message-name">Chat Message</h4>
+            <p class="chatbox-message-status">online</p>
+          </div>
+        </div>
+        <div class="chatbox-message-dropdown">
+          <i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
+          <ul class="chatbox-message-dropdown-menu">
+            <li>
+              <a href="#">Search</a>
+            </li>
+            <li>
+              <a href="#">Report</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="chatbox-message-content">
+        <h4 class="chatbox-message-no-message">You don't have message yet!</h4>
+        <!-- <div class="chatbox-message-item sent">
+          <span class="chatbox-message-item-text">
+            Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+          </span>
+          <span class="chatbox-message-item-time">08:30</span>
+        </div>
+        <div class="chatbox-message-item received">
+          <span class="chatbox-message-item-text">
+            Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+          </span>
+          <span class="chatbox-message-item-time">08:30</span>
+        </div> -->
+      </div>
+      <div class="chatbox-message-bottom">
+        <form action="#" class="chatbox-message-form">
+          <textarea rows="1" placeholder="Type message..." class="chatbox-message-input"></textarea>
+          <button type="submit" class="chatbox-message-submit"><i class='bx bx-send' ></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="chatbox/scriptss.js"></script>
+  </div>
+</body>
+</html>

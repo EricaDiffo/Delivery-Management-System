@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>ORDERS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">AdminHub</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="../Customer/client.html" title="info-client">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Customer Status</span>
+				</a>
+			</li>
+			<li>
+				<a href="../Order/index.html" title="Order-info">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Delivery Information</span>
+				</a>
+			</li>
+			<li>
+				<a href="../Deliverer/Livreur.html" title="Livreur-info">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Delivery Status</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Message</span>
+				</a>
+			</li>
+			
+		</ul>
+		<ul class="side-menu">
+			<!-- <li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li> -->
+			<li>
+				<a href="../../administrateur.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+    <main class="table" id="customers_table">
+        <section class="table__header">
+            <h1>Customer's Orders</h1>
+            <!-- <div class="input-group">
+                <input type="search" placeholder="Search Data...">
+                <img src="images/search.png" alt="">
+            </div> -->
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+                <div class="export__file-options">
+                    <label>Export As &nbsp; &#10140;</label>
+                    <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
+                </div>
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <!-- <th> Id <span class="icon-arrow">&UpArrow;</span></th> -->
+                        <th> Customer Name<span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Telephone <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Goods <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Weight <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Actual Location <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Delivery Location <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Order Date <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Vehicule Type <span class="icon-arrow">&UpArrow;</span></th>
+                        <!-- <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Amount <span class="icon-arrow">&UpArrow;</span></th> -->
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+                    <!-- <tr>
+                        <td> 1 </td>
+                        <td> <img src="images/Zinzu Chan Lee.jpg" alt="">Warren  King</td>
+                        <td> Refrigerateur</td>
+                        <td> Fragile</td>
+                        <td> 280kg</td>
+                        <td> Bonapriso </td>
+                        <td> 17 Dec, 2022 </td>
+                        <td> Van </td>
+                        <td>
+                            <p class="status delivered">Delivered</p>
+                        </td>
+                        <td> <strong> $128.90 </strong></td>
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td><img src="images/Jeet Saru.png" alt=""> Boni Andrew </td>
+                        <td> Oranges</td>
+                        <td> perissables</td>
+                        <td> 400kg</td>
+                        <td> Logbessou </td>
+                        
+                        <td> 27 Aug, 2023 </td>
+                        <td> Van </td>
+                        <td>
+                            <p class="status cancelled">Cancelled</p>
+                        </td>
+                        <td> <strong>$5350.50</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 3</td>
+                        <td><img src="images/Sonal Gharti.jpg" alt=""> Kakus Bio </td>
+                        <td> Fenetre</td>
+                        <td> Fragile</td>
+                        <td> 450kg</td>
+                        <td> Logpom </td>
+                        <td> 14 Mar, 2023 </td>
+                        <td> Van </td>
+                        <td>
+                            <p class="status shipped">Shipped</p>
+                        </td>
+                        <td> <strong>$210.40</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 4</td>
+                        <td><img src="images/Alson GC.jpg" alt=""> Alcime GC </td>
+                        <td> Ecrans</td>
+                        <td> Fragile</td>
+                        <td> 460kg</td>
+                        <td> New Deido </td>
+                        <td> 25 May, 2023 </td>
+                        <td> Van </td>
+                        <td>
+                            <p class="status delivered">Delivered</p>
+                        </td>
+                        <td> <strong>$149.70</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 5</td>
+                        <td><img src="images/Sarita Limbu.jpg" alt=""> Sarita Limbu </td>
+                        <td> Bouteille</td>
+                        <td> Fragile</td>
+                        <td> 470kg</td>
+                        <td> Bepanda </td>
+                        <td> 23 Apr, 2023 </td>
+                        <td> Van </td>
+                        <td>
+                            <p class="status pending">Pending</p>
+                        </td>
+                        <td> <strong>$399.99</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 6</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Super Alex</td>
+                        <td> Refrigerateur</td>
+                        <td> Fragile</td>
+                        <td> 510kg</td>
+                        <td> Sadi </td>
+                        <td> 23 Apr, 2023 </td>
+                        <td> Van </td>
+                        <td>
+                            <p class="status cancelled">Cancelled</p>
+                        </td>
+                        <td> <strong>$399.99</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 7</td>
+                        <td><img src="images/Alson GC.jpg" alt=""> Eri Small </td>
+                        <td> Congelateur</td>
+                        <td> Fragile</td>
+                        <td> 400kg</td>
+                        <td>Ndogpassi </td>
+                        <td> 20 May, 2023 </td>
+                        <td> Truck </td>
+                        <td>
+                            <p class="status delivered">Delivered</p>
+                        </td>
+                        <td> <strong>$399.99</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 8</td>
+                        <td><img src="images/Sarita Limbu.jpg" alt=""> King Ghost</td>
+                        <td> Acid</td>
+                        <td> Corrosive</td>
+                        <td> 420kg</td>
+                        <td> Deido </td>
+                        <td> 30 Feb, 2023 </td>
+                        <td> Cargo bike </td>
+                        <td>
+                            <p class="status pending">Pending</p>
+                        </td>
+                        <td> <strong>$149.70</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Alson GiC </td>
+                        <td> Gaz</td>
+                        <td> Inflammables</td>
+                        <td> 490kg</td>
+                        <td> Dhaka </td>
+                        <td> 22 Dec, 2023 </td>
+                        <td> Truck </td>
+                        <td>
+                            <p class="status cancelled">Cancelled</p>
+                        </td>
+                        <td> <strong>$249.99</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Bridon Brad </td>
+                        <td> Insecticide</td>
+                        <td> Inflemmables</td>
+                        <td> 400kg</td>
+                        <td> Dhaka </td>
+                        <td> 22 Dec, 2023 </td>
+                        <td> Van </td>
+                        <td>
+                            <p class="status cancelled">Cancelled</p>
+                        </td>
+                        <td> <strong>$249.99</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Presnel Gims </td>
+                        <td> Refrigerateur</td>
+                        <td> Fragile</td>
+                        <td> 350kg</td>
+                        <td> Ndokoti </td>
+                        <td> 22 Dec, 2023 </td>
+                        <td> Cargo bike</td>
+                        <td>
+                            <p class="status cancelled">Cancelled</p>
+                        </td>
+                        <td> <strong>$249.99</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Peps OGE </td>
+                        <td> PC</td>
+                        <td> Technologiques</td>
+                        <td> 400kg</td>
+                        <td> Yassa </td>
+                        <td> 22 Dec, 2023 </td>
+                        <td> Classic Vehicle </td>
+                        <td>
+                            <p class="status cancelled">Cancelled</p>
+                        </td>
+                        <td> <strong>$249.99</strong> </td>
+                    </tr>
+                    <tr>
+                        <td> 9</td>
+                        <td><img src="images/Alex Gonley.jpg" alt=""> Gunners GC </td>
+                        <td> Refrigerateur</td>
+                        <td> Fragile</td>
+                        <td> 600kg</td>
+                        <td> Dhaka </td>
+                        <td> 22 Dec, 2023 </td>
+                        <td> Van </td>
+                        <td>
+                            <p class="status cancelled">Cancelled</p>
+                        </td>
+                        <td> <strong>$249.99</strong> </td>
+                    </tr> -->

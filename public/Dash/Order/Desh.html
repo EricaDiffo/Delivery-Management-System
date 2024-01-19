@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELIVERY-ORDER</title>
+    <link rel="stylesheet" href="Desh.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <div class="blash">
+        <h1>DELIVERY STATUS</h1>
+    </div>
+
+    <div class="description">
+        <img src="Images/Deliveroo.jpg" alt="">
+    </div>
+
+    <div class="container">
+      
+       
+
+        <form action="" class="form" method="post">
+
+            <div class="form-control">
+                <label for="name">PRODUCT NAME</label>
+            <input type="text" id="name" placeholder=" BISCUIT" >
+
+            </div>
+            
+           <div class="form-control">
+            <label for="weight">POIDS</label>
+            <input type="text" id="weight" placeholder="20kg" ">
+           </div>
+
+
+           <div class="form-control">
+            <label for="limit">DATE LIMITE DE LIVRAISON</label>
+            <input type="datetime" placeholder="2004/07/08 14:30" id="limit" ">
+
+           </div>
+
+           <div class="form-control">
+            <label for="product" >TYPE DE PRODUIT</label>
+            <input type="text" placeholder="Fragile" id="product" >
+           </div>
+           
+            <div class="form-control">
+
+                
+            <label for="car">TYPE DE VEHICULE</label>
+
+            <select name="#" id="car" aria-placeholder="Description de la zone de livraison">
+                <option value="1">Cargo bike
+                    <img src="Images/Cargo.png" alt="">
+                </option>
+                <option value="2">Vehicule classique
+                    <img src="Images/class.png" alt="">
+                </option>
+                <option value="3">Vehicule frigorifique
+                    <img src="Images/Frigo.png" alt="">
+                </option>
+                <option value="4">Vehicule a faible emissions
+                    <span><i class="fa fa-truck" aria-hidden="true"></i></span>
+                </option>
+            </select>
+
+
+            </div>
+
+            <div class="form-control">
+
+                <textarea name="" id="splash" cols="30" rows="10">
+
+                    Description de la zone de livraison
+    
+                </textarea>
+    
+
+            </div>
+
+            <button  id="submitButton" onclick="submitData()" >SUBMIT
+            </button>
+            <!-- <img src="Images/set.png" alt="" class="send"> -->
+
+            <div id="spinner" style="display: none;">
+     <img src="Images/Spinner.png" alt="Loading..." />
+         </div>
+
+           
+        </form>
+        <div class="trivial">
+            <table border="1" id="public">
+                <thead>
+                  <tr>
+                    <td>
+                        NOM DU PRODUIT
+                    </td>
+                    <td>
+                        POIDS
+                    </td>
+                    <td>
+                        DATE LIVRAISON
+                    </td>
+                    <td>
+                        TYPE VEHICULE
+                    </td>
+                    <td>
+                        POSITION ACTUELLE
+                    </td>
+                    <td>
+                        LIEU LIVRAISON
+                    </td>
+                  </tr>
+                </thead>
+                <tbody >
+                    <tr>    
+                        <td>venom</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+        
+                </tbody>
+            </table>
+            
+
+        </div>
+       
+
+    </div>
+   
+</body>
+</html>

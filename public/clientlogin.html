@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style/client.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <h2>Hi, enter your details to log in to your account</h2>
+    <form action="/connexionC" method="POST">
+      <div class="input-group">
+        
+        <input type="text" placeholder="Email" id="email" name="email">
+      </div>
+      <div class="input-group">
+     
+        <input type="password" placeholder="Password" id="mdp" name="mdp">
+      </div>
+      <a href="motdepasseoublieC.html" id="forgotPasswordLink" style="color: black;">Forgot Password?</a>
+      <input type="submit" value="Login">
+    </form>
+    <div class="other-options">
+      <!-- <p>Or Login with </p>  -->
+      <div class="social-media-icons" > <b>
+        <a href="#"><img src="google-icon.png" alt="Google" style="color: black;"></a>
+        <a href="#"><img src="facebook-icon.png" alt="Facebook" style="color: black;"></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter" style="color: black;"></a>
+        </b>
+      </div>
+      <p>Don't have an account? <b> <a href="clientregister.html" style="color: black;">Sign Up </b></a></p>
+    </div>
+    
+  </div>
+  <div class="place-image">
+    <img src="style/image/1705217397239.png" width="" height="480px">
+</div>
+</body>
+</html>

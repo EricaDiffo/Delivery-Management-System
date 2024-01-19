@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sign up Form</title>
+  <link rel="stylesheet" href="style/client.css">
+</head>
+<body>
+  <div class="login-container" style="transform: translateX(100px);">
+    <h1>Registration</h1>
+    <h2>Hi, enter your details to register for your account</h2>
+    <form action="/enregistrerC" method="POST" name="formulaire">
+        <div class="input-group">
+        
+            <input type="text" placeholder="Username" name="nom" id="nom">
+          </div>
+          <div class="input-group">
+        
+            <input type="text" placeholder="Email" name="email" id="email">
+          </div>
+          <div class="input-group">
+        
+            <input type="text" placeholder="Telephone" name="telephone" id="telephone">
+          </div>
+      <div class="input-group">
+        
+        <input type="text" placeholder="Entreprise" id="entreprise" name="entreprise">
+      </div>
+      
+      <div class="input-group">
+     
+        <input type="password" placeholder="Password" name="mdp" id="mdp">
+      </div>
+     
+      <input type="submit" value="Sign Up">
+    </form>
+    <div class="other-options">
+      <!-- <p>Or Login with </p> 
+      <div class="social-media-icons" > <b>
+        <a href="#"><img src="google-icon.png" alt="Google" style="color: black;"></a>
+        <a href="#"><img src="facebook-icon.png" alt="Facebook" style="color: black;"></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter" style="color: black;"></a>
+        </b>
+      </div> -->
+      <p>Already have an account ?<b> <a href="clientlogin.html" style="color: black;">Sign-in </b></a></p>
+    </div>
+    
+  </div>
+  <div class="place-image">
+    <img src="style/image/1705217397239.png" width="" height="480px" style="transform: translateX(100px);">
+</div>
+</body>
+</html>

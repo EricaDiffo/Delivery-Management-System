@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style/info.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <form action="/enregistrerInfo" method="post">
+            <h1>Effectuer une demande de livraison</h1>
+            <div class="input-box">
+                
+                <div class="input-field">
+                <input type="email" placeholder="email" id="email" name="email" required style="transform: translateX(50%);">
+                </div>
+                
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="goods" id="goods" name="goods" required pattern="(Non Fragile|Fragile)" title="Veuillez saisir 'Non Fragile' ou 'Fragile'">
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="weight" id="weight" name="weight" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="date" placeholder="date" id="date_Info" name="date_Info" required>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="actualLocation" id="actualLocation" name="actualLocation" required>
+                </div>
+            </div>
+
+            <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="deliveryLocation" id="deliveryLocation" name="deliveryLocation" required>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="transportMode" id="transportMode" name="transportMode" required pattern="(Moto|Voiture)" title="Veuillez saisir 'Voiture' ou 'Moto'">
+                    </div>
+            </div>
+
+            <button type="submit" class="btn">Validez</button>
+            
+        </form>
+    </div>
+    <div>
+        <link rel="stylesheet" href="chatbox/styless.css">
+        <div class="chatbox-wrapper">
+          <div class="chatbox-toggle">
+            <i class='bx bx-message-dots'></i>
+          </div>
+          <div class="chatbox-message-wrapper">
+            <div class="chatbox-message-header">
+              <div class="chatbox-message-profile">
+                <img src="chatbox/avatar1.jpg" alt="" class="chatbox-message-image">
+                <div>
+                  <h4 class="chatbox-message-name">Chat Message</h4>
+                  <p class="chatbox-message-status">online</p>
+                </div>
+              </div>
+              <div class="chatbox-message-dropdown">
+                <i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
+                <ul class="chatbox-message-dropdown-menu">
+                  <li>
+                    <a href="#">Search</a>
+                  </li>
+                  <li>
+                    <a href="#">Report</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="chatbox-message-content">
+              <h4 class="chatbox-message-no-message">You don't have message yet!</h4>
+              <!-- <div class="chatbox-message-item sent">
+                <span class="chatbox-message-item-text">
+                  Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+                </span>
+                <span class="chatbox-message-item-time">08:30</span>
+              </div>
+              <div class="chatbox-message-item received">
+                <span class="chatbox-message-item-text">
+                  Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quod, fugiat?
+                </span>
+                <span class="chatbox-message-item-time">08:30</span>
+              </div> -->
+            </div>
+            <div class="chatbox-message-bottom">
+              <form action="#" class="chatbox-message-form">
+                <textarea rows="1" placeholder="Type message..." class="chatbox-message-input"></textarea>
+                <button type="submit" class="chatbox-message-submit"><i class='bx bx-send' ></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <script src="chatbox/scriptss.js"></script>
+        </div>
+    
+</body>
+</html>
